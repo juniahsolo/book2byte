@@ -50,7 +50,7 @@ export const Navbar: React.FC = () => {
           to="/" 
           className="relative overflow-hidden bg-white text-black h-[34px] px-3 flex items-center text-[11px] font-medium uppercase border border-black leading-none group"
         >
-          <span className="relative z-10">DISCOVER</span>
+          <span className="relative z-10">ABOUT</span>
           <span className="absolute inset-0 bg-[#FA76FF] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
         </Link>
         <button 
@@ -64,7 +64,7 @@ export const Navbar: React.FC = () => {
           }}
           className="relative overflow-hidden bg-white text-black h-[34px] px-3 flex items-center text-[11px] font-medium uppercase border-l-0 border border-black leading-none group"
         >
-          <span className="relative z-10">CREATE EVENT</span>
+          <span className="relative z-10">CREATE A BOOK</span>
           <span className="absolute inset-0 bg-[#FA76FF] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
         </button>
         {user ? (
@@ -91,7 +91,7 @@ export const Navbar: React.FC = () => {
             onClick={() => setIsAuthOpen(true)}
             className="relative overflow-hidden bg-white text-black h-[34px] px-3 flex items-center text-[11px] font-medium uppercase border-l-0 border border-black leading-none group"
           >
-            <span className="relative z-10">SIGN IN</span>
+            <span className="relative z-10">GET INVOLVED</span>
             <span className="absolute inset-0 bg-[#FA76FF] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
           </button>
         )}
@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
               className="flex-1 flex items-center justify-center text-[#1A1A1A] text-[17px] font-medium uppercase border-b border-black tracking-[-0.34px] animate-fade-in"
               style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
             >
-              DISCOVER
+              ABOUT
             </Link>
             <button 
               onClick={() => {
@@ -133,7 +133,7 @@ export const Navbar: React.FC = () => {
               className="flex-1 flex items-center justify-center text-[#1A1A1A] text-[17px] font-medium uppercase border-b border-black tracking-[-0.34px] animate-fade-in"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
-              CREATE EVENT
+              CREATE A BOOK
             </button>
             {user ? (
               <>
@@ -165,7 +165,7 @@ export const Navbar: React.FC = () => {
                 className="flex-1 flex items-center justify-center text-[#1A1A1A] text-[17px] font-medium uppercase tracking-[-0.34px] animate-fade-in"
                 style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
               >
-                SIGN IN
+                GET INVOLVED
               </button>
             )}
           </div>
