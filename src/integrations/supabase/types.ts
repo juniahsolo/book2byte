@@ -14,6 +14,89 @@ export type Database = {
   }
   public: {
     Tables: {
+      book_likes: {
+        Row: {
+          book_id: string
+          created_at: string
+          id: string
+          user_id: string
+        }
+        Insert: {
+          book_id: string
+          created_at?: string
+          id?: string
+          user_id: string
+        }
+        Update: {
+          book_id?: string
+          created_at?: string
+          id?: string
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "book_likes_book_id_fkey"
+            columns: ["book_id"]
+            isOneToOne: false
+            referencedRelation: "books"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      books: {
+        Row: {
+          age_group: string
+          author: string
+          chapters: Json
+          cover_url: string | null
+          created_at: string
+          file_path: string | null
+          id: string
+          loves_count: number
+          mode: string
+          review_notes: string | null
+          status: Database["public"]["Enums"]["book_status"]
+          synopsis: string | null
+          title: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          age_group?: string
+          author: string
+          chapters?: Json
+          cover_url?: string | null
+          created_at?: string
+          file_path?: string | null
+          id?: string
+          loves_count?: number
+          mode?: string
+          review_notes?: string | null
+          status?: Database["public"]["Enums"]["book_status"]
+          synopsis?: string | null
+          title: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          age_group?: string
+          author?: string
+          chapters?: Json
+          cover_url?: string | null
+          created_at?: string
+          file_path?: string | null
+          id?: string
+          loves_count?: number
+          mode?: string
+          review_notes?: string | null
+          status?: Database["public"]["Enums"]["book_status"]
+          synopsis?: string | null
+          title?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       event_registrations: {
         Row: {
           event_id: string
@@ -142,6 +225,7 @@ export type Database = {
     }
     Enums: {
       app_role: "admin" | "user"
+      book_status: "pending" | "approved" | "rejected"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -270,6 +354,7 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "user"],
+      book_status: ["pending", "approved", "rejected"],
     },
   },
 } as const
