@@ -53,20 +53,13 @@ export const Navbar: React.FC = () => {
           <span className="relative z-10">ABOUT</span>
           <span className="absolute inset-0 bg-[#FA76FF] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
         </Link>
-        <button 
-          onClick={() => {
-            if (user) {
-              navigate('/create-event');
-            } else {
-              setPendingRoute('/create-event');
-              setIsAuthOpen(true);
-            }
-          }}
+        <Link
+          to="/create-book"
           className="relative overflow-hidden bg-white text-black h-[34px] px-3 flex items-center text-[11px] font-medium uppercase border-l-0 border border-black leading-none group"
         >
           <span className="relative z-10">CREATE A BOOK</span>
           <span className="absolute inset-0 bg-[#FA76FF] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
-        </button>
+        </Link>
         {user ? (
           <>
             <Link 
@@ -120,21 +113,14 @@ export const Navbar: React.FC = () => {
             >
               ABOUT
             </Link>
-            <button 
-              onClick={() => {
-                if (user) {
-                  navigate('/create-event');
-                } else {
-                  setPendingRoute('/create-event');
-                  setIsAuthOpen(true);
-                }
-                setIsMobileMenuOpen(false);
-              }}
+            <Link
+              to="/create-book"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="flex-1 flex items-center justify-center text-[#1A1A1A] text-[17px] font-medium uppercase border-b border-black tracking-[-0.34px] animate-fade-in"
               style={{ animationDelay: '0.2s', animationFillMode: 'both' }}
             >
               CREATE A BOOK
-            </button>
+            </Link>
             {user ? (
               <>
                 <Link 

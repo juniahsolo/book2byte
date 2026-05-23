@@ -11,6 +11,7 @@ import CreateEvent from "./pages/CreateEvent";
 import EditEvent from "./pages/EditEvent";
 import NotFound from "./pages/NotFound";
 import GetInvolved from "./pages/GetInvolved";
+import CreateBook from "./pages/CreateBook";
 
 const App = () => (
   <TooltipProvider>
@@ -25,6 +26,7 @@ const App = () => (
       <Route path="/auth" element={<Auth />} />
       <Route path="/admin" element={<Admin />} />
       <Route path="/get-involved" element={<GetInvolved />} />
+      <Route path="/create-book" element={<CreateBook />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>
