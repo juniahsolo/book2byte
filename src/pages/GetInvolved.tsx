@@ -124,7 +124,7 @@ const GetInvolved = () => {
             </h2>
             <div className="mt-8 grid sm:grid-cols-3 gap-0 border border-black">
               {[
-                { n: 'A', t: 'Drop off', d: 'At any of our partner cafés and bookstores in Lagos, Nairobi & Accra.' },
+                { n: 'A', t: 'Drop off', d: 'Reach out at +254708096462 for shipment arrangement .' },
                 { n: 'B', t: 'Ship to us', d: 'Use our prepaid label for boxes of 20+ books. We cover the rest.' },
                 { n: 'C', t: 'Host a drive', d: 'Run a one-week book drive at your school, office or community.' },
               ].map((s, i) => (
