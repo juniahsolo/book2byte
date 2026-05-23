@@ -13,6 +13,8 @@ import NotFound from "./pages/NotFound";
 import GetInvolved from "./pages/GetInvolved";
 import CreateBook from "./pages/CreateBook";
 import About from "./pages/About";
+import MyBooks from "./pages/MyBooks";
+import Library from "./pages/Library";
 
 const App = () => (
   <TooltipProvider>
@@ -29,6 +31,8 @@ const App = () => (
       <Route path="/get-involved" element={<GetInvolved />} />
       <Route path="/create-book" element={<CreateBook />} />
       <Route path="/about" element={<About />} />
+      <Route path="/my-books" element={<MyBooks />} />
+      <Route path="/library" element={<Library />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
     </Routes>
