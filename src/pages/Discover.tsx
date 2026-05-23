@@ -179,9 +179,9 @@ const Discover = () => {
   };
   return <div className="min-h-screen bg-white">
       <SEOHead 
-        title="Discover Events"
-        description="Explore popular events near you, browse by category, or check out some of the great community calendars."
-        keywords="events, discover events, community events, local events, event calendar"
+        title="Book 2 Byte Africa"
+        description="We tackle the literacy gap with a two-phase approach, starting with the timeless power of books and building towards a future of digital empowerment."
+        keywords="books, literacy, digital empowerment, Africa, education"
       />
       <div className="animate-fade-in" style={{ animationDelay: '0.1s', animationFillMode: 'both' }}>
         <Navbar />
