@@ -47,7 +47,7 @@ export const Navbar: React.FC = () => {
       {/* Desktop Navigation */}
       <div className="hidden md:flex items-center">
         <Link 
-          to="/" 
+          to="/about" 
           className="relative overflow-hidden bg-white text-black h-[34px] px-3 flex items-center text-[11px] font-medium uppercase border border-black leading-none group"
         >
           <span className="relative z-10">ABOUT</span>
@@ -106,7 +106,7 @@ export const Navbar: React.FC = () => {
           {/* Menu items */}
           <div className="flex-1 flex flex-col bg-white">
             <Link 
-              to="/" 
+              to="/about" 
               onClick={() => setIsMobileMenuOpen(false)}
               className="flex-1 flex items-center justify-center text-[#1A1A1A] text-[17px] font-medium uppercase border-b border-black tracking-[-0.34px] animate-fade-in"
               style={{ animationDelay: '0.1s', animationFillMode: 'both' }}
