@@ -60,13 +60,20 @@ export const Navbar: React.FC = () => {
           <span className="relative z-10">CREATE A BOOK</span>
           <span className="absolute inset-0 bg-[#FA76FF] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
         </Link>
+        <Link
+          to="/library"
+          className="relative overflow-hidden bg-white text-black h-[34px] px-3 flex items-center text-[11px] font-medium uppercase border-l-0 border border-black leading-none group"
+        >
+          <span className="relative z-10">LIBRARY</span>
+          <span className="absolute inset-0 bg-[#FA76FF] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
+        </Link>
         {user ? (
           <>
             <Link 
-              to="/my-events" 
+              to="/my-books" 
               className="relative overflow-hidden bg-white text-black h-[34px] px-3 flex items-center text-[11px] font-medium uppercase border-l-0 border border-black leading-none group"
             >
-              <span className="relative z-10">MY EVENTS</span>
+              <span className="relative z-10">MY BOOKS</span>
               <span className="absolute inset-0 bg-[#FA76FF] translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></span>
             </Link>
             <button 
@@ -121,15 +128,23 @@ export const Navbar: React.FC = () => {
             >
               CREATE A BOOK
             </Link>
+            <Link
+              to="/library"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex-1 flex items-center justify-center text-[#1A1A1A] text-[17px] font-medium uppercase border-b border-black tracking-[-0.34px] animate-fade-in"
+              style={{ animationDelay: '0.25s', animationFillMode: 'both' }}
+            >
+              LIBRARY
+            </Link>
             {user ? (
               <>
                 <Link 
-                  to="/my-events" 
+                  to="/my-books" 
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="flex-1 flex items-center justify-center text-[#1A1A1A] text-[17px] font-medium uppercase border-b border-black tracking-[-0.34px] animate-fade-in"
                   style={{ animationDelay: '0.3s', animationFillMode: 'both' }}
                 >
-                  MY EVENTS
+                  MY BOOKS
                 </Link>
                 <button 
                   onClick={async () => {
