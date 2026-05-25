@@ -15,23 +15,26 @@ import CreateBook from "./pages/CreateBook";
 import About from "./pages/About";
 import MyBooks from "./pages/MyBooks";
 import Library from "./pages/Library";
+import { ProtectedRoute } from "./components/ProtectedRoute";
+import { SessionStatus } from "./components/SessionStatus";
 
 const App = () => (
   <TooltipProvider>
     <Toaster />
     <Sonner />
+    <SessionStatus />
     <Routes>
       <Route path="/" element={<Discover />} />
       <Route path="/event/:id" element={<Index />} />
-      <Route path="/event/:id/edit" element={<EditEvent />} />
-      <Route path="/my-events" element={<MyEvents />} />
-      <Route path="/create-event" element={<CreateEvent />} />
+      <Route path="/event/:id/edit" element={<ProtectedRoute><EditEvent /></ProtectedRoute>} />
+      <Route path="/my-events" element={<ProtectedRoute><MyEvents /></ProtectedRoute>} />
+      <Route path="/create-event" element={<ProtectedRoute><CreateEvent /></ProtectedRoute>} />
       <Route path="/auth" element={<Auth />} />
-      <Route path="/admin" element={<Admin />} />
+      <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
       <Route path="/get-involved" element={<GetInvolved />} />
-      <Route path="/create-book" element={<CreateBook />} />
+      <Route path="/create-book" element={<ProtectedRoute><CreateBook /></ProtectedRoute>} />
       <Route path="/about" element={<About />} />
-      <Route path="/my-books" element={<MyBooks />} />
+      <Route path="/my-books" element={<ProtectedRoute><MyBooks /></ProtectedRoute>} />
       <Route path="/library" element={<Library />} />
       {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
       <Route path="*" element={<NotFound />} />
