@@ -7,6 +7,8 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { z } from 'zod';
 import { SEOHead } from '@/components/SEOHead';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { AdminStoryApprovals } from '@/components/AdminStoryApprovals';
 
 // Input validation schema
 const eventSchema = z.object({
