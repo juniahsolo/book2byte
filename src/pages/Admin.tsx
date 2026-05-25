@@ -262,13 +262,24 @@ const Admin = () => {
       <div className="max-w-4xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-normal text-[#1A1A1A] tracking-[-0.02em]">
-            Event CMS
+            Admin Dashboard
           </h1>
           <Button onClick={handleSignOut} variant="outline">
             Sign Out
           </Button>
         </div>
 
+        <Tabs defaultValue="stories" className="w-full">
+          <TabsList className="mb-6">
+            <TabsTrigger value="stories">Story Approvals</TabsTrigger>
+            <TabsTrigger value="events">Events</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value="stories">
+            <AdminStoryApprovals />
+          </TabsContent>
+
+          <TabsContent value="events">
         {selectedEvent && (
           <form onSubmit={handleSave} className="space-y-6">
             <div>
