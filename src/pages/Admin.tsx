@@ -402,6 +402,8 @@ const Admin = () => {
             </Button>
           </form>
         )}
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
