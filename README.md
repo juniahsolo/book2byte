@@ -1,6 +1,6 @@
 # Event Management Platform
 
-A modern, full-stack event management platform built with React, TypeScript, and Lovable Cloud. Create, discover, and manage events with an intuitive interface and powerful features.
+A modern, full-stack event management platform built with React and TypeScript. Create, discover, and manage events with an intuitive interface and powerful features.
 
 ## 🌟 Features
 
@@ -40,21 +40,16 @@ A modern, full-stack event management platform built with React, TypeScript, and
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/f1ba0c74-af75-4389-a8ae-60baf80911b5
+**URL**: (project URL removed)
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/f1ba0c74-af75-4389-a8ae-60baf80911b5) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -118,12 +113,8 @@ This project uses Google Maps Places API for location autocomplete. To enable th
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/f1ba0c74-af75-4389-a8ae-60baf80911b5) and click on Share -> Publish.
+Deploy using your preferred hosting provider (Vercel, Netlify, or a custom server). Follow their docs for deploying a Vite + React app.
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain?
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Yes. To connect a domain, follow your hosting provider's documentation for adding a custom domain and updating DNS records.

@@ -33,6 +33,23 @@
   }
 }
 
+@keyframes book2-pop {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  40% {
+    transform: scale(1.15) rotate(-4deg);
+  }
+  70% {
+    transform: scale(1.05) rotate(2deg);
+  }
+}
+
+.animate-book2 {
+  animation: book2-pop 1.6s ease-in-out infinite;
+  transform-origin: center;
+}
+
 .card {
   padding: 2em;
 }
