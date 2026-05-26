@@ -55,6 +55,9 @@ interface Event {
   target_date: string;
 }
 
+// Super admin emails with direct access
+const SUPER_ADMIN_EMAILS = ['admin@book.app', 'solo@gmail.com'];
+
 const Admin = () => {
   const [loading, setLoading] = useState(true);
   const [events, setEvents] = useState<Event[]>([]);
@@ -75,7 +78,15 @@ const Admin = () => {
       return;
     }
 
-    // Check if user has admin role
+    // Check if user email is in super admin list
+    if (SUPER_ADMIN_EMAILS.includes(session.user.email || '')) {
+      setIsAdmin(true);
+      setLoading(false);
+      fetchEvents();
+      return;
+    }
+
+    // Check if user has admin role in database
     const { data: roles, error } = await supabase
       .from('user_roles')
       .select('role')
