@@ -307,7 +307,7 @@ const CreateBook = () => {
             <BookOpen className="w-8 h-8 md:w-12 md:h-12" strokeWidth={1.5} />
             Every <span className="bg-[#ffeb3b] text-black px-2">story</span> counts.
           </div>
-          <div className="text-[11px] font-medium uppercase tracking-wider opacity-70">authors@book2byte.africa</div>
+          <div className="text-[11px] font-medium uppercase tracking-wider opacity-70">authors@book2byte.app</div>
         </div>
       </section>
 

@@ -177,7 +177,7 @@ const About = () => {
             <span className="bg-[#ff5722] px-2">Byte.</span>
           </div>
           <div className="text-[11px] font-medium uppercase tracking-wider opacity-70">
-            hello@book2byte.africa
+            hello@book2byte.app
           </div>
         </div>
       </section>
